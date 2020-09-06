@@ -1,0 +1,125 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --max-width: 1100px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 11px;
+  font-family: Poppins, sans-serif;
+  background: var(--Very-Light-Gray);
+}
+p {
+  color: var(--Grayish-Blue);
+  /* margin: 0.5rem; */
+}
+
+.p-big {
+  font-size: 2.1rem;
+}
+.p-light {
+  color: var(--Very-Dark-Blue);
+  font-weight: 200;
+}
+.p-bold {
+  color: var(--Very-Dark-Blue);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.card {
+  align-self: center;
+  justify-self: center;
+  font-size: 12px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-rows: 1.7fr 1fr;
+  /* border: var(--Grayish-Blue) solid 1px; */
+  box-shadow: -1px 5px 17px -8px rgba(103, 122, 175, 0.94);
+  border-radius: 5px;
+}
+.card-cyan {
+  border-top: var(--Cyan) 5px solid;
+}
+.card-blue {
+  border-top: var(--Blue) 5px solid;
+}
+.card-yellow {
+  border-top: var(--Orange) 5px solid;
+}
+.card-red {
+  border-top: var(--Red) 5px solid;
+}
+.card .text h2 {
+  margin-bottom: 0.3rem;
+  color: var(--Very-Dark-Blue);
+}
+.card .text p {
+  line-height: 1.2rem;
+}
+.card > .logo {
+  align-self: flex-end;
+  justify-self: flex-end;
+  display: flex;
+}
+.card > .logo > img {
+  align-self: flex-end;
+}
+
+#main-div {
+  max-width: var(--max-width);
+  padding: 4rem 2rem;
+  margin: auto;
+}
+#main-div .heading {
+  /* height: 20vh; */
+  text-align: center;
+  max-width: 36rem;
+  margin: auto;
+}
+#main-div .heading > *:last-child {
+  font-size: 1rem;
+}
+
+#main-div .all-cards {
+  /* height: 60vh; */
+  margin: 1.5rem;
+  margin-top: 3rem;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+#main-div .all-cards .middle-boxes {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+  #main-div .all-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #main-div .heading {
+    text-align: center;
+  }
+  .p-big {
+    font-size: 1.5rem;
+  }
+  #main-div {
+    padding: 2rem 1rem;
+    margin: auto;
+  }
+  .card {
+    max-width: 19.0625rem;
+  }
+}
