@@ -119,6 +119,9 @@ p {
     padding: 2rem 1rem;
     margin: auto;
   }
+  #main-div .heading > *:last-child {
+    font-size: 0.8rem;
+  }
   .card {
     max-width: 19.0625rem;
   }
